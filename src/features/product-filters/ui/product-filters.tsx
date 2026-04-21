@@ -37,7 +37,7 @@ export const ProductFilters = ({ brands, onApply }: ProductFiltersProps) => {
             value={brand}
             onChange={(e) => setBrand(e.target.value)}
           >
-            <option value="">Select brand</option>
+            <option value="">All Brands</option>
             {brands.map((b) => (
               <option key={b} value={b}>
                 {b}
