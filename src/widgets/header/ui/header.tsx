@@ -8,16 +8,17 @@ interface HeaderProps {
   onCategoryChange?: (category: string) => void;
 }
 
+const categories = [
+  { id: "tv", label: "TV" },
+  { id: "phone", label: "Phone" },
+  { id: "laptop", label: "Laptop" },
+];
+
 export const Header = ({
   cartItemsCount = 0,
   activeCategory = "tv",
   onCategoryChange,
 }: HeaderProps) => {
-  const categories = [
-    { id: "tv", label: "TV" },
-    { id: "phone", label: "Phone" },
-    { id: "laptop", label: "Laptop" },
-  ];
 
   return (
     <header className={styles.header}>

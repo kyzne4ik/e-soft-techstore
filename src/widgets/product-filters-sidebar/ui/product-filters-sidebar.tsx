@@ -1,5 +1,5 @@
-import { ProductFilters } from '~features/product-filters';
-import styles from './product-filters-sidebar.module.css';
+import { ProductFilters } from "~features/product-filters";
+import styles from "./product-filters-sidebar.module.css";
 
 interface ProductFiltersSidebarProps {
   onApply: (filters: {
@@ -9,9 +9,11 @@ interface ProductFiltersSidebarProps {
   }) => void;
 }
 
-export const ProductFiltersSidebar = ({ onApply }: ProductFiltersSidebarProps) => {
-  const brands = ['Samsung', 'LG', 'Sony', 'Apple', 'Google', 'TCL', 'Hisense'];
+const brands = ["Samsung", "LG", "Sony", "Apple", "Google", "TCL", "Hisense"];
 
+export const ProductFiltersSidebar = ({
+  onApply,
+}: ProductFiltersSidebarProps) => {
   return (
     <div className={styles.sidebarSection}>
       <ProductFilters brands={brands} onApply={onApply} />
